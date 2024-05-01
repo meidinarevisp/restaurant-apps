@@ -134,12 +134,15 @@ module.exports = {
           },
         },
         {
-          urlPattern: /\.(?:png|jpg|jpeg|svg|gif)$/,
+          urlPattern: /\.(?:png|jpg|jpeg|svg|gif|webp)$/,
           handler: "CacheFirst",
           options: {
             cacheName: "images-cache",
             expiration: {
               maxEntries: 50,
+            },
+            cacheableResponse: {
+              statuses: [0, 200],
             },
           },
         },
@@ -150,7 +153,7 @@ module.exports = {
       short_name: "SavorSpot",
       description: "Discover Great Dining Experience",
       background_color: "#ffffff",
-      theme_color: "#ff6347",
+      theme_color: "#ffffff",
       crossorigin: "use-credentials",
       publicPath: "./",
       icons: [

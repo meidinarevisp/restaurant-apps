@@ -10,6 +10,7 @@ import {
 import "../styles/main.scss";
 import "./components/Navbar";
 import "./components/Footer";
+import "./components/HeroRestaurant";
 import "./components/page-detail/RestaurantDetail";
 import Swal from "sweetalert2";
 
