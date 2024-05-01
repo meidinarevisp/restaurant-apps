@@ -22,8 +22,10 @@ async function displayFavoriteRestaurants() {
     console.log("Favorite restaurants:", favorites);
 
     if (favorites.length === 0) {
-      favoritesSection.textContent =
-        "<p style='text-align: center;'>No favorite restaurants yet.</p>";
+      favoritesSection.textContent = "No favorite restaurants yet.";
+      favoritesSection.style.display = "flex";
+      favoritesSection.style.justifyContent = "center";
+      favoritesSection.style.alignItems = "center";
       return;
     }
 
