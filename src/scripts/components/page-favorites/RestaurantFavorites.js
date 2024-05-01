@@ -1,16 +1,16 @@
 class RestaurantFavorites extends HTMLElement {
   constructor() {
-    super()
+    super();
   }
 
   connectedCallback() {
     this.innerHTML = `
       <div class="favorite-restaurant" id="explore-content">
-        <h1>Favorite Restaurants</h1>
+        <h2>Favorite Restaurants</h2>
       </div>
       <div class="favorites"></div>
-    `
+    `;
   }
 }
 
-customElements.define('restaurant-favorites', RestaurantFavorites)
+customElements.define("restaurant-favorites", RestaurantFavorites);

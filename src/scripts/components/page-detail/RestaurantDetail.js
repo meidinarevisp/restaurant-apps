@@ -1,7 +1,10 @@
 class RestaurantDetail extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <section class="restaurant-detail" id="explore-content">
+    <div class="detail-restaurant" id="explore-content">
+    <h2>Detail Restaurants</h2>
+    </div>
+      <section class="restaurant-detail" >
         <div class="detail-container">
           <div class="left-column">
             <h1 id="restaurant-name"></h1>
@@ -48,8 +51,8 @@ class RestaurantDetail extends HTMLElement {
           </div>
         </div>
       </section>
-    `
+    `;
   }
 }
 
-customElements.define('restaurant-detail', RestaurantDetail)
+customElements.define("restaurant-detail", RestaurantDetail);
