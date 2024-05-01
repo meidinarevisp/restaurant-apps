@@ -14,48 +14,12 @@
     />
   </head>
   <body>
-    <div id="splash-screen" style="width: 100%; height: 100vh">
-      <picture>
-        <source srcset="/images/icon/restaurant.webp" type="image/webp" />
-        <source srcset="/images/icon/restaurant.png" type="image/png" />
-        <img src="/images/icon/restaurant.png" alt="SavorSpot" />
-      </picture>
-    </div>
+    <splash-screen></splash-screen>
     <header>
       <navbar-restaurant></navbar-restaurant>
     </header>
     <main>
-      <section class="hero">
-        <div class="hero-overlay">
-          <h1>Welcome to SavorSpot!</h1>
-          <button class="explore-button" tabindex="0" id="main-content">
-            <a href="#explore-content">Explore</a>
-          </button>
-        </div>
-        <picture>
-          <source
-            media="(min-width: 1200px)"
-            srcset="./images/heros/hero-image_2-large.webp"
-          />
-          <source
-            media="(min-width: 1200px)"
-            srcset="./images/heros/hero-image_2-large.jpg"
-          />
-          <source
-            media="(max-width: 768px)"
-            srcset="./images/heros/hero-image_2-small.webp"
-          />
-          <source
-            media="(max-width: 768px)"
-            srcset="./images/heros/hero-image_2-small.jpg"
-          />
-          <source
-            srcset="./images/heros/hero-image_2-large.webp"
-            type="image/webp"
-          />
-          <img src="./images/heros/hero-image_2-large.jpg" alt="Hero Image" />
-        </picture>
-      </section>
+      <hero-restaurant></hero-restaurant>
       <restaurant-list></restaurant-list>
       <loading-indicator></loading-indicator>
       <error-message></error-message>

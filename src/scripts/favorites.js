@@ -3,6 +3,7 @@ import { getAllFavorites } from "./utils";
 import "../styles/main.scss";
 import "./components/Navbar";
 import "./components/Footer";
+import "./components/HeroRestaurant";
 import "./components/page-favorites/RestaurantFavorites";
 
 async function displayFavoriteRestaurants() {
