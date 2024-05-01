@@ -23,6 +23,7 @@ async function displayFavoriteRestaurants() {
 
     if (favorites.length === 0) {
       favoritesSection.textContent = "No favorite restaurants yet.";
+      favoritesSection.style.textAlign = "center";
       return;
     }
 
