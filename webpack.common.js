@@ -159,7 +159,8 @@ module.exports = {
       icons: [
         {
           src: path.resolve(__dirname, "src/public/images/icon/restaurant.png"),
-          sizes: [48, 72, 96, 144, 192, 256, 384, 512],
+          sizes: [48],
+          purpose: "maskable",
         },
         {
           src: path.resolve(__dirname, "src/public/images/icon/restaurant.png"),
@@ -167,7 +168,7 @@ module.exports = {
         },
         {
           src: path.resolve(__dirname, "src/public/images/icon/restaurant.png"),
-          size: "800x800",
+          size: "1024x1024",
           purpose: "maskable",
         },
       ],
