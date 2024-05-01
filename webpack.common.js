@@ -152,14 +152,14 @@ module.exports = {
       name: "SavorSpot",
       short_name: "SavorSpot",
       description: "Discover Great Dining Experience",
-      background_color: "#ffffff",
+      background_color: "transparent",
       theme_color: "#ffffff",
       crossorigin: "use-credentials",
       publicPath: "./",
       icons: [
         {
           src: path.resolve(__dirname, "src/public/images/icon/restaurant.png"),
-          sizes: [96, 128, 192, 256, 384, 512],
+          sizes: [48, 72, 96, 144, 192, 256, 384, 512],
         },
         {
           src: path.resolve(__dirname, "src/public/images/icon/restaurant.png"),
