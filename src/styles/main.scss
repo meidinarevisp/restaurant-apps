@@ -108,6 +108,7 @@ header {
   justify-content: center;
 
   input[type="search"] {
+    color: $white-color;
     padding: 15px 20px;
     font-size: 14px;
     letter-spacing: 1px;
@@ -725,7 +726,7 @@ header {
 
   .loading-indicator {
     .loader {
-      margin-top: 250px;
+      margin-top: 300px;
     }
   }
 
