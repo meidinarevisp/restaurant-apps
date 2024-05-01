@@ -1,6 +1,6 @@
 class HeroRestaurant extends HTMLElement {
   constructor() {
-    super();
+    super()
   }
 
   connectedCallback() {
@@ -36,8 +36,8 @@ class HeroRestaurant extends HTMLElement {
           <img src="./images/heros/hero-image_2-large.jpg" alt="Hero Image" />
         </picture>
       </section>
-    `;
+    `
   }
 }
 
-customElements.define("hero-restaurant", HeroRestaurant);
+customElements.define('hero-restaurant', HeroRestaurant)

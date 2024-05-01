@@ -1,23 +1,23 @@
-import "lazysizes";
-import "lazysizes/plugins/parent-fit/ls.parent-fit";
-import "./SearchRestaurant";
+import 'lazysizes'
+import 'lazysizes/plugins/parent-fit/ls.parent-fit'
+import './SearchRestaurant'
 
 class RestaurantList extends HTMLElement {
   constructor() {
-    super();
+    super()
   }
 
   connectedCallback() {
-    this.render();
+    this.render()
   }
 
   set restaurants(restaurants) {
-    this._restaurants = restaurants;
-    this.render();
+    this._restaurants = restaurants
+    this.render()
   }
 
   render() {
-    if (!this._restaurants) return;
+    if (!this._restaurants) return
 
     this.innerHTML = `
     <div class="explore-restaurant" id="explore-content">
@@ -26,47 +26,47 @@ class RestaurantList extends HTMLElement {
       </div>
       <search-bar></search-bar>
       <section class="restaurants">
-        ${this._restaurants.map(this.renderRestaurant).join("")}
+        ${this._restaurants.map(this.renderRestaurant).join('')}
       </section>
-    `;
+    `
   }
 
   renderRestaurant(restaurant) {
     const truncatedDescription =
-      restaurant.description.substring(0, 100) + "...";
+      restaurant.description.substring(0, 100) + '...'
 
     return `
       <div class="restaurant">
         <img
           class="lazyload"
           data-src="https://restaurant-api.dicoding.dev/images/small/${
-            restaurant.pictureId
-          }"
+  restaurant.pictureId
+}"
           alt="${restaurant.name}">
         <a href="./detail.html?id=${restaurant.id}" class="restaurant-name">${
-      restaurant.name
-    }</a>
+  restaurant.name
+}</a>
         <h3 class="star-rating">${
-          generateStarRating(restaurant.rating).stars
-        } (${generateStarRating(restaurant.rating).numericRating})</h3>
+  generateStarRating(restaurant.rating).stars
+} (${generateStarRating(restaurant.rating).numericRating})</h3>
         <p>${truncatedDescription}</p>
         <h4>${restaurant.city}</h4>
       </div>
-    `;
+    `
   }
 }
 
 function generateStarRating(rating) {
-  const fullStars = Math.floor(rating);
-  const halfStars = Math.ceil(rating - fullStars);
-  const emptyStars = 5 - fullStars - halfStars;
+  const fullStars = Math.floor(rating)
+  const halfStars = Math.ceil(rating - fullStars)
+  const emptyStars = 5 - fullStars - halfStars
 
   const stars =
-    "★".repeat(fullStars) + "☆".repeat(halfStars) + "☆".repeat(emptyStars);
+    '★'.repeat(fullStars) + '☆'.repeat(halfStars) + '☆'.repeat(emptyStars)
 
-  const numericRating = rating.toFixed(1);
+  const numericRating = rating.toFixed(1)
 
-  return { stars, numericRating };
+  return { stars, numericRating }
 }
 
-customElements.define("restaurant-list", RestaurantList);
+customElements.define('restaurant-list', RestaurantList)

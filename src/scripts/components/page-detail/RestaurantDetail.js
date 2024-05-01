@@ -51,8 +51,8 @@ class RestaurantDetail extends HTMLElement {
           </div>
         </div>
       </section>
-    `;
+    `
   }
 }
 
-customElements.define("restaurant-detail", RestaurantDetail);
+customElements.define('restaurant-detail', RestaurantDetail)

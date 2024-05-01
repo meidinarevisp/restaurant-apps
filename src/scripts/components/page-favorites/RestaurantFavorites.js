@@ -1,6 +1,6 @@
 class RestaurantFavorites extends HTMLElement {
   constructor() {
-    super();
+    super()
   }
 
   connectedCallback() {
@@ -9,8 +9,8 @@ class RestaurantFavorites extends HTMLElement {
         <h2>Favorite Restaurants</h2>
       </div>
       <div class="favorites"></div>
-    `;
+    `
   }
 }
 
-customElements.define("restaurant-favorites", RestaurantFavorites);
+customElements.define('restaurant-favorites', RestaurantFavorites)

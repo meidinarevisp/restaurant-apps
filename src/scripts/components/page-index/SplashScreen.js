@@ -1,6 +1,6 @@
 class SplashScreen extends HTMLElement {
   constructor() {
-    super();
+    super()
   }
 
   connectedCallback() {
@@ -12,8 +12,8 @@ class SplashScreen extends HTMLElement {
         <img src="/images/icon/restaurant.png" alt="SavorSpot" />
       </picture>
     </div>
-    `;
+    `
   }
 }
 
-customElements.define("splash-screen", SplashScreen);
+customElements.define('splash-screen', SplashScreen)

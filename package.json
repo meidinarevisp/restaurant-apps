@@ -7,6 +7,7 @@
     "build": "npm run build-webpack && npm run build-image",
     "build-webpack": "webpack --config webpack.prod.js",
     "build-image": "node sharp.js",
+    "e2e": "codeceptjs run --steps",
     "serve": "http-server dist",
     "test": "jest",
     "test:watch": "jest --watchAll",

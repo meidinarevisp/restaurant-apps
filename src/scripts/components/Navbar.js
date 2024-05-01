@@ -14,6 +14,7 @@ class Navbar extends HTMLElement {
           <span class="bar"></span>
         </button>
         <ul class="nav-menu">
+         <li><a href="explore-content" id="maincontent" tabindex="0">Main Content</a></li>
           <li><a href="/">Home</a></li>
           <li><a href="/favorites.html">Favorites</a></li>
           <li><a href="https://www.instagram.com/meidinarevisp/">About Us</a></li>
@@ -46,6 +47,40 @@ class Navbar extends HTMLElement {
         }
       })
     })
+
+    const mainContent = document.getElementById('maincontent')
+    if (mainContent) {
+      mainContent.addEventListener('click', (event) => {
+        event.preventDefault()
+        const exploreContentSection =
+          document.getElementById('explore-content')
+        if (exploreContentSection) {
+          const headerHeight = document.querySelector('header').offsetHeight
+
+          window.scrollTo({
+            top: exploreContentSection.offsetTop - headerHeight,
+            behavior: 'smooth'
+          })
+        }
+      })
+    }
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Tab') {
+        const mainContent = document.getElementById('maincontent')
+        if (mainContent) {
+          mainContent.style.display = 'initial'
+
+          setTimeout(() => {
+            mainContent.style.display = 'none'
+          }, 1000)
+        }
+      }
+    })
+
+    if (mainContent) {
+      mainContent.style.display = 'none'
+    }
 
     document.addEventListener('click', (event) => {
       if (!event.target.closest('.navbar')) {

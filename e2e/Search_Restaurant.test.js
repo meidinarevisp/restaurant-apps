@@ -4,6 +4,7 @@ Scenario("Search for a restaurant by name", ({ I }) => {
   I.amOnPage("http://localhost:8080/");
   I.waitForElement("#splash-screen", 5);
   I.click("#main-content");
+  I.waitForElement("#search-form", 5);
   I.seeElement("#search-form");
 
   const searchContent = "Kafe Kita";
@@ -17,6 +18,7 @@ Scenario("Search with empty input should display all restaurants", ({ I }) => {
   I.amOnPage("http://localhost:8080/");
   I.waitForElement("#splash-screen", 5);
   I.click("#main-content");
+  I.waitForElement("#search-form", 5);
   I.seeElement("#search-form");
 
   const searchContent = "Kafein";
@@ -33,6 +35,7 @@ Scenario("Search for a restaurant with case-insensitive input", ({ I }) => {
   I.amOnPage("http://localhost:8080/");
   I.waitForElement("#splash-screen", 5);
   I.click("#main-content");
+  I.waitForElement("#search-form", 5);
   I.seeElement("#search-form");
   I.fillField("#search-input", "AmPiRaN KoTa");
   I.click("#search");
@@ -44,6 +47,7 @@ Scenario("Search for a restaurant that does not exist", ({ I }) => {
   I.amOnPage("http://localhost:8080/");
   I.waitForElement("#splash-screen", 5);
   I.click("#main-content");
+  I.waitForElement("#search-form", 5);
   I.seeElement("#search-form");
 
   const searchContent = "Sushi World";
@@ -56,6 +60,7 @@ Scenario("Search for a restaurant with partial name match", ({ I }) => {
   I.amOnPage("http://localhost:8080/");
   I.waitForElement("#splash-screen", 5);
   I.click("#main-content");
+  I.waitForElement("#search-form", 5);
   I.seeElement("#search-form");
 
   const searchContent = "cafe";
