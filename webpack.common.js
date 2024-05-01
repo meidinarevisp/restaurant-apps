@@ -152,6 +152,7 @@ module.exports = {
       name: "SavorSpot",
       short_name: "SavorSpot",
       description: "Discover Great Dining Experience",
+      background_color: "transparent",
       theme_color: "#ffffff",
       crossorigin: "use-credentials",
       publicPath: "./",
