@@ -310,27 +310,18 @@ header {
 .restaurant-detail {
   .detail-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-color: $white-color;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: 300px;
+    margin-left: 300px;
 
-    .left-column {
-      flex: 0 0 50%;
-      padding-right: 20px;
-      margin-bottom: 30px;
-    }
-
-    .right-column {
-      flex: 0 0 45%;
-      padding-left: 20px;
+    .info {
       margin-bottom: 30px;
     }
   }
@@ -436,7 +427,7 @@ header {
 
     input[type="text"],
     textarea {
-      width: 92%;
+      width: 97%;
       padding: 12px;
       font-size: 16px;
       border: 1px solid #bbb3b3;
@@ -702,8 +693,7 @@ header {
       margin-left: 20px;
       margin-right: 20px;
 
-      .left-column,
-      .right-column {
+      .info {
         flex: 1;
         padding: 0;
         margin-bottom: 20px;
@@ -725,6 +715,11 @@ header {
 
     #review-form {
       margin-top: 20px;
+
+      input[type="text"],
+      textarea {
+        width: 92%;
+      }
     }
 
     button[type="submit"] {

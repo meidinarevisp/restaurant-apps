@@ -6,7 +6,7 @@ class RestaurantDetail extends HTMLElement {
     </div>
       <section class="restaurant-detail" >
         <div class="detail-container">
-          <div class="left-column">
+          <div class="info">
             <h1 id="restaurant-name"></h1>
             <img id="restaurant-image" src="" alt="" />
             <button id="favorite-button">Add to Favorites</button>
@@ -14,6 +14,7 @@ class RestaurantDetail extends HTMLElement {
             <p id="restaurant-address"></p>
             <p id="restaurant-description"></p>
             <p id="restaurant-categories"></p>
+            <div class="menu-container">
             <h2>Menu</h2>
             <div class="menu-item">
               <div id="container-food">
@@ -27,8 +28,6 @@ class RestaurantDetail extends HTMLElement {
                 <div id="drink-menu"></div>
               </div>
             </div>
-          </div>
-          <div class="right-column">
             <center>
               <h2>
                 Customer Reviews
@@ -49,10 +48,9 @@ class RestaurantDetail extends HTMLElement {
               <button type="submit">Submit Review</button>
             </form>
           </div>
-        </div>
       </section>
-    `
+    `;
   }
 }
 
-customElements.define('restaurant-detail', RestaurantDetail)
+customElements.define("restaurant-detail", RestaurantDetail);
